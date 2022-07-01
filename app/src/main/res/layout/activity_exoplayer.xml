@@ -80,11 +80,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/cartoon" />
+            android:background="@drawable/cartoon"/>
 
         <ImageButton
             android:layout_width="30dp"
@@ -92,13 +91,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/ic_heart" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="9"
-            android:textColor="#B3ABAB"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#B3ABAB"/>
 
         <ImageButton
             android:layout_width="30dp"
@@ -106,13 +104,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/ic_radio" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textColor="#B3ABAB"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#B3ABAB"/>
 
         <ImageButton
             android:layout_width="30dp"
@@ -120,25 +117,24 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/ic_share_colorful" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
-            android:textColor="#B3ABAB"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textColor="#B3ABAB"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:elevation="10dp"
-        android:gravity="bottom"
         android:orientation="horizontal"
+        android:layout_marginBottom="60dp"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="bottom"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -154,112 +150,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:text="User Name"
             android:maxWidth="120dp"
             android:maxLines="1"
-            android:text="User Name"
             android:textColor="#AAA5A5"
             android:textSize="15sp" />
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/follow_background"
-            android:gravity="center"
-            android:padding="4dp"
-            android:text="Follow"
-            android:textColor="#AAA5A5"
-            android:textSize="15sp" />
+           <TextView
+               android:layout_width="80dp"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:gravity="center"
+               android:padding="4dp"
+               android:text="Follow"
+               android:background="@drawable/follow_background"
+               android:textColor="#AAA5A5"
+               android:textSize="15sp" />
     </LinearLayout>
 
-    <FrameLayout
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/exoPlayerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="#000"
-        android:scaleType="center"
+        app:use_controller="false"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:id="@+id/media_container"/>
-
-    <ImageView
-        android:id="@+id/volume_control"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_gravity="end|bottom"
-        android:alpha="0"
-        android:animateLayoutChanges="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_volume_up_grey_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="1.0"></com.google.android.exoplayer2.ui.SimpleExoPlayerView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:layout_width="match_parent"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:orientation="vertical"-->
-<!--    android:background="@color/white"-->
-<!--    android:layout_height="match_parent">-->
-
-<!--&lt;!&ndash;    <FrameLayout&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:layout_marginBottom="10dp"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@id/title"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:background="#000"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:scaleType="center"&ndash;&gt;-->
-<!--&lt;!&ndash;        android:id="@+id/media_container">&ndash;&gt;-->
-
-<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;            android:id="@+id/thumbnail"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:background="#fff"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:scaleType="centerInside"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:src="@color/white" />&ndash;&gt;-->
-
-<!--        <ImageView-->
-<!--            android:layout_width="25dp"-->
-<!--            android:layout_height="25dp"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:src="@drawable/ic_volume_up_grey_24dp"-->
-<!--            android:layout_gravity="end|bottom"-->
-<!--            android:id="@+id/volume_control"-->
-<!--            android:alpha="0"-->
-<!--            android:animateLayoutChanges="true"-->
-<!--            android:layout_marginEnd="15dp"-->
-<!--            android:layout_marginBottom="15dp"/>-->
-
-<!--        <ProgressBar-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/progressBar"-->
-<!--            style="?android:attr/progressBarStyle"-->
-<!--            android:visibility="gone"-->
-<!--            android:layout_gravity="center" />-->
-<!--    </FrameLayout>-->
-
-
-<!--</LinearLayout>-->

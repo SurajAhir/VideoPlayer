@@ -1,4 +1,4 @@
-package com.example.videoplayer;
+package com.example.videoplayer.scrollable_videos;//package com.example.videoplayer;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.RequestManager;
+import com.example.videoplayer.R;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.PlaybackParameters;
@@ -111,9 +112,9 @@ public class VideoPlayerRecyclerView extends RecyclerView {
 
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
                     Log.d(TAG, "onScrollStateChanged: called.");
-                    if(thumbnail != null){ // show the old thumbnail
-                        thumbnail.setVisibility(VISIBLE);
-                    }
+//                    if(thumbnail != null){ // show the old thumbnail
+//                        thumbnail.setVisibility(VISIBLE);
+//                    }
 
                     // There's a special case when the end of the list has been reached.
                     // Need to handle that with this bit of logic
@@ -409,7 +410,7 @@ public class VideoPlayerRecyclerView extends RecyclerView {
             animateVolumeControl();
         }
         else if(state == VolumeState.ON){
-            videoPlayer.setVolume(1f);
+            videoPlayer.setVolume(15f);
             animateVolumeControl();
         }
     }
@@ -418,7 +419,7 @@ public class VideoPlayerRecyclerView extends RecyclerView {
         if(volumeControl != null){
             volumeControl.bringToFront();
             if(volumeState == VolumeState.OFF){
-                requestManager.load(R.drawable.ic_volume_off_gray)
+                requestManager.load(R.drawable.ic_volume_off_grey_24dp)
                         .into(volumeControl);
             }
             else if(volumeState == VolumeState.ON){

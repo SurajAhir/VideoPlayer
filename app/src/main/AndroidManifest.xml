@@ -3,6 +3,8 @@
     package="com.example.videoplayer">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,21 +15,40 @@
         android:theme="@style/Theme.VideoPlayer"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ListOfVideos"
-            android:exported="true" >
+            android:name=".exoplayer_ui.Exoplayer"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+<!--        <activity-->
+<!--            android:name=".VideoViewWithPause.VideoPlayerWithPause"-->
+<!--            android:exported="true">-->
+<!--&lt;!&ndash;            <intent-filter>&ndash;&gt;-->
+<!--&lt;!&ndash;                <action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name=".PlaySingleVideo"-->
+<!--            android:exported="true" />-->
+<!--        <activity-->
+<!--            android:name=".ListOfVideos"-->
+<!--            android:exported="true"></activity>-->
+        <activity
+            android:name=".scrollable_videos.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.VideoPlayer.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.VideoPlayer.NoActionBar">
-
         </activity>
     </application>
 

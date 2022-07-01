@@ -1,4 +1,4 @@
-package com.example.videoplayer;
+package com.example.videoplayer.scrollable_videos;
 
 public class Resources {
 

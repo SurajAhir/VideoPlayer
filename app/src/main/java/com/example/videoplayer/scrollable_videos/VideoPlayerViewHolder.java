@@ -1,4 +1,4 @@
-package com.example.videoplayer;
+package com.example.videoplayer.scrollable_videos;
 
 import android.view.View;
 import android.widget.FrameLayout;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.RequestManager;
-
+import com.example.videoplayer.R;
 public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
 
     FrameLayout media_container;
@@ -25,9 +25,9 @@ public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
         parent = itemView;
         media_container = itemView.findViewById(R.id.media_container);
 //        thumbnail = itemView.findViewById(R.id.thumbnail);
-//        title = itemView.findViewById(R.id.title);
+        title = itemView.findViewById(R.id.title);
         progressBar = itemView.findViewById(R.id.progressBar);
-//        volumeControl = itemView.findViewById(R.id.volume_control);
+        volumeControl = itemView.findViewById(R.id.volume_control);
     }
 
     public void onBind(MediaObject mediaObject, RequestManager requestManager) {
